@@ -22,14 +22,8 @@ public class Main {
 			}
 		}
 		int area = 1;
-		if (steps[5][0] == steps[1][0]) {
-			area *= steps[0][1];
-		}
-		if (steps[4][0] == steps[0][0]) {
-			area *= steps[5][1];
-		}
-		for (int i = 1; i < 5; i++) {
-			if (steps[i - 1][0] == steps[i + 1][0]) {
+		for (int i = 0; i < 6; i++) {
+			if (steps[(i+5)%6][0] == steps[(i+1)%6][0]) {
 				area *= steps[i][1];
 			}
 		}
